@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 const nunjucks = require('nunjucks');
+const routes = require('./routes');
+
+app.use(express.static('public'));
+
+app.use('/', routes);
 
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
