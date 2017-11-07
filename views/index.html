@@ -15,10 +15,21 @@
     
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.content}}</li>
+      <div class="media">
+        <div class="media-left pull-left">
+          <a href="#">
+            <img class="media-object" src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg" alt="Fullstack">
+          </a>
+        </div>
+        <div class="media-body">       
+          <h4 class="media-heading"><a href="/users/{{tweet.name}}">{{tweet.name}}</a>----<a href="/tweets/{{tweet.id}}"> View Tweet</a></h4>
+          {{tweet.content}}
+        </div>
+      </div>
       {% endfor %}
       
     </div>
   </div>
     
 {% endblock %}
+

@@ -11,12 +11,12 @@ app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 nunjucks.configure('views', { noCache: true });
 
-app.use('/', (req, res) => {
-  console.log(`${req.method} ${req.url} ${req.statusCode}`);
+// app.use('/', (req, res) => {
+//   console.log(`${req.method} ${req.url} ${req.statusCode}`);
 
-  const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
-  res.render( 'index', {title: 'Hall of Fame', people: people} );
-});
+//   const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
+//   res.render( 'index', {title: 'Hall of Fame', people: people} );
+// });
 
 app.listen(3000, () => {
   console.log('Listening on port 3000');
