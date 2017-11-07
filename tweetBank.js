@@ -2,7 +2,9 @@ const _ = require('lodash');
 
 
 function add (name, content) {
-  data.push({ name: name, content: content, id: data.length });
+  var newTweet = { name: name, content: content, id: data.length };
+  data.push(newTweet);
+  return newTweet;
 }
 
 function list () {
